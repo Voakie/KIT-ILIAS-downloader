@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  esel:
+    container_name: esel
+    build: .
+    volumes:
+        - "./output:/usr/downloader"
+    environment:
+        -  SYNC_URL=https://ilias.studium.kit.edu/ilias.php?ref_id=1473252&cmdClass=ilrepositorygui&baseClass=ilrepositorygui
+        -  RATE=8
+        -  EXTRA_ARGS=
+    env_file:
+        - ilias.env
