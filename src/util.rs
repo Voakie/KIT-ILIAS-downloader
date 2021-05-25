@@ -30,5 +30,5 @@ pub async fn create_dir(path: &Path) -> Result<()> {
 const INVALID: &[char] = &['/', '\\', ':', '<', '>', '"', '|', '?', '*', '\n', '\t'];
 
 pub fn file_escape(s: &str) -> String {
-	s.replace(INVALID, "-")
+	s.replace(INVALID, "_")
 }
